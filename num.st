@@ -36,6 +36,10 @@ numDec: x
   ^x
 !
 
+nextPutAll: collection
+  collection do: [:a | self numInc: a]. 
+!
+
 eject: aBlock [
   ^self select: [:element | (aBlock value: element) not]
 ]
