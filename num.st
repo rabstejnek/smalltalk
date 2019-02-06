@@ -40,7 +40,11 @@ nextPutAll: collection
   collection do: [:a | self numInc: a]. 
 !
 
-eject: aBlock [
+!!
+
+! Array methods !
+
+eject: aBlock 
   ^self select: [:element | (aBlock value: element) not]
-]
+
 !!
