@@ -13,6 +13,13 @@ oo
 talk
   "Shorthand for reading in code"
   ^FileStream fileIn: self asString,'.st' !
+  
+! SequenceableCollection methods !
+b4Now: aBlock
+  | x |
+  x := (self size - 1).
+  1 to: x do: [:element | aBlock value: element value: (element + 1)] 
+!!
 
 "-------------------------------------------------------"
 ! String methods !
@@ -120,6 +127,10 @@ visit: aBlock
      (self instVarAt: i) visit: aBlock ]
 !!
 
+! Object methods !
+visit: aBlock
+  
+
 Magic sub: #Employee has: 'name age shoesize'
 
 ! Employee methods !
@@ -156,6 +167,3 @@ goodVisit
     "
     w visit:[:a| a oo] 
 !!
-
-
-
