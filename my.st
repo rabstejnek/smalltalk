@@ -126,11 +126,7 @@ visit: aBlock
   1 to: num do: [:i | 
      (self instVarAt: i) visit: aBlock ]
 !!
-
-! Object methods !
-visit: aBlock
   
-
 Magic sub: #Employee has: 'name age shoesize'
 
 ! Employee methods !
