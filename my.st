@@ -18,7 +18,7 @@ talk
 b4Now: aBlock
   | x |
   x := (self size - 1).
-  1 to: x do: [:element | aBlock value: element value: (element + 1)] 
+  1 to: x do: [:element | aBlock value: (self at: element) value: (self at: (element + 1))] 
 !!
 
 "-------------------------------------------------------"
@@ -126,7 +126,7 @@ visit: aBlock
   1 to: num do: [:i | 
      (self instVarAt: i) visit: aBlock ]
 !!
-  
+
 Magic sub: #Employee has: 'name age shoesize'
 
 ! Employee methods !
