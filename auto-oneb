@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 sudo apt-get update
 sudo apt-get -y install gnu-smalltalk
-chmod +x oneb
-./oneb
+#chmod +x oneb
+#./oneb
